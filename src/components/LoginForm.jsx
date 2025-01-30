@@ -50,21 +50,21 @@ const LoginForm = () => {
   };
 
   return (
-    <main className="home-container">
-      <div className="content-wrapper">
-        <div className="left-section">
-          <div className="image-slider">
+    <main className="auth-page">
+      <div className="auth-content-wrapper">
+        <div className="auth-left-section">
+          <div className="auth-image-container">
             <img src="/images/food1.jpg" alt="Food" />
           </div>
         </div>
 
-        <div className="right-section">
-          <div className="form-container">
+        <div className="auth-right-section">
+          <div className="auth-form-container">
             <h2>Enter your credentials</h2>
-            {error && <div className="message error-message">{error}</div>}
-            {success && <div className="message success-message">{success}</div>}
+            {error && <div className="auth-message auth-error-message">{error}</div>}
+            {success && <div className="auth-message auth-success-message">{success}</div>}
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
+              <div className="auth-form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -75,7 +75,7 @@ const LoginForm = () => {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div className="auth-form-group">
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -86,7 +86,7 @@ const LoginForm = () => {
                   required
                 />
               </div>
-              <button type="submit" className="submit-btn">Login</button>
+              <button type="submit" className="auth-submit-btn">Login</button>
             </form>
           </div>
         </div>
