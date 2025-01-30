@@ -1,0 +1,5 @@
+Please add four food-related images in this directory with the following names:
+food1.jpg
+food2.jpg
+food3.jpg
+food4.jpg
