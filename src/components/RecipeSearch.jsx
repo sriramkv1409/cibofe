@@ -37,7 +37,7 @@ const RecipeSearch = () => {
     
     try {
       const response = await recipeApi.get(`/recipes/search?ingredients=${encodeURIComponent(ingredients)}`);
-      console.log("Search response:", response);
+       console.log("Search response:", response);
       
       if (response.data && Array.isArray(response.data)) {
         setRecipes(response.data);

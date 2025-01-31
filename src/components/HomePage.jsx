@@ -5,7 +5,6 @@ import './HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
@@ -24,11 +23,6 @@ const HomePage = () => {
 
     return () => clearInterval(timer);
   }, []);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log('Searching for:', searchQuery);
-  };
 
   return (
     <main className="home-container">
@@ -57,19 +51,6 @@ const HomePage = () => {
             <br />
             with what you've got!"
           </h1>
-
-          <div className="home-search-section">
-            <form onSubmit={handleSearch} className="home-search-form">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for recipes..."
-                className="home-search-input"
-              />
-              <button type="submit" className="home-search-button">Search</button>
-            </form>
-          </div>
 
           <p className="home-experience-text">For better experience</p>
 
